@@ -70,7 +70,8 @@ function weather(city){
 map_data=climate[0].innerHTML
 var uri2=fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
 console.log("map",map_data)
-var video=document.querySelector("video")
+var video=document.getElementById("video1")
+var video2=document.getElementById("video2")
 uri2.then((response)=>{
     if(!response.ok){
         throw "the link is not loadedproperly"
@@ -78,12 +79,13 @@ uri2.then((response)=>{
     return response.json()
 
 }).then((data)=>{
-    
+    video.classList.remove("hidden")
     var rand=Math.floor((Math.random()*10))
-    video.setAttribute("src",data.hits[rand].videos.large.url)
-    video.addEventListener("loadeddata",()=>{
-
-        video.play()
+    video2.setAttribute("src",data.hits[rand].videos.large.url)
+    video2.addEventListener("loadeddata",()=>{
+video.classList.add("hidden")
+video2.classList.remove("hidden")
+        video2.play()
         console.log(Math.floor(Math.random()))
     })
     console.log(data.hits[0])

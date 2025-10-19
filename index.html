@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./tailwind.css">
+</head>
+<body class="xl:overflow-hidden">
+    <div class="absolute h-full   w-full  xl:h-72 top-0 z-10">
+
+        <div class="flex xl:p-5 sticky top-0 ">
+            <p class="text-lg xl:text-2xl font-semibold text-white border-red-500   border bg-purple-500 px-2 py-3">city:</p><input  id="city_entry" placeholder="enter the city" class="px-2 py-3 text-lg xl:text-2xl  bg-yellow-300 border border-red-500     text-white xl:p-5 focus:outline-none" type="text"><button class="bg-blue-500 px-2 py-3 xl:p-5 text-white font-semibold text-lg xl:text-2xl " id="trigger">sumbit</button>
+        </div>
+        <div class="hidden xl:block">
+
+            <div  class=" flex mb-1 flex justify-between mt-5">
+                <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="city">Tirnelveli</p>
+                <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="climate">mist</p>
+            </div>
+            <div  class=" flex justify-center align-middle w-full">
+                <p id="temp" class="bg-white rounded-full text-blue-500  shadow-3xl text-4xl w-32 text-center p-5">15°C</p>
+            </div>
+            <div class="flex justify-between  p-5 w-full rounded-full">
+                
+                <div class="flex  bg-white p-5  rounded-full">
+
+                    <div class="flex">
+                        <img src="./humidity.png" class="w-10" alt="">
+                         <p class="text-4xl">
+                        Humidity:    </p> 
+    
+                    </div>
+                    <p class="text-4xl" id="humidity">12</p>
+                </div>
+                <div class="flex  bg-white p-5  rounded-full">
+
+                    <div class="flex">
+                        <img src="./wind.png" class="w-10" alt="">
+                         <p class="text-4xl">
+                        Pressure:    </p> 
+    
+                    </div>
+                    <p class="text-4xl" id="Pressure">12</p>
+                </div>
+            </div>
+            <!-- other section-->
+                         <div class="flex justify-center  p-5 w-full rounded-full">
+                
+                <div class="flex  bg-white p-5  rounded-full">
+
+                    <div class="flex">
+                        <img src="./eye.png" class="w-10" alt="">
+                         <p class="text-4xl">
+                        visibility:    </p> 
+    
+                    </div>
+                    <p class="text-4xl" id="visibility">12</p>
+                </div>
+               
+            </div>
+             <div class="flex   p-5 justify-center  rounded-full">
+<div class="bg-white p-5 rounded-full flex">
+
+    <div class="flex">
+        <img src="./description.png" class="w-10" alt="">
+         <p class="text-4xl">
+        discription:    </p> 
+
+    </div>
+    <p class="text-4xl" id="description"></p>
+</div>
+</div>
+        </div>
+    </div>
+    <div class="relative">
+        <video src="./mist.mp4" height="100%" preload="metadata" muted autoplay="true" loop ></video>
+    </div>
+
+        <section id="phone" class="bg-purple-500  p-5 ">
+
+        <div class=" xl:hidden block bg-purple-500 text-white   grid grid-cols-1  gap-6">
+
+            <div  class="  text-white flex  p-5  bg-yellow-500 mt-4 ">
+                <img src="./location.png" class="w-10" alt="">
+                <p class="text-xl ">place:</p>
+                <p class="    shadow-2xl  text-xl  text-center " id="city">Tirnelveli</p>
+                
+            </div>
+            <div class="flex p-5  bg-yellow-500 "><img src="./cloudy-day.png" class="w-10" alt=""><p class="text-xl">climate:</p><p class="text-xl  " id="climate">mist</p></div>
+            <div  class=" flex  p-5  bg-yellow-500">
+                <img src="./temperature.png" class="w-10" alt="">
+                <p class="text-xl">temp:</p>
+                <p id="temp" class="    shadow-3xl text-xl w-32  ">15°C</p>
+            </div>
+           
+                
+                <div class="flex     p-5    bg-yellow-500">
+
+                    
+                        <img src="./humidity.png" class="w-10" alt="">
+                         <p class="text-xl">
+                        Humidity:    </p> 
+    
+                    
+                    <p class="text-xl" id="humidity">12</p>
+                </div>
+                <div class="flex bg-yellow-500   p-5">
+
+                   
+                        <img src="./wind.png" class="w-10" alt="">
+                         <p class="text-xl">
+                        Pressure:    </p> 
+    
+                   
+                    <p class="text-xl" id="Pressure">12</p>
+                </div>
+            
+            <!-- other section-->
+                         
+                
+                <div class="flex   bg-yellow-500  p-5">
+
+   
+        <img src="./eye.png" class="w-10" alt="">
+         <p class="text-xl">
+        visibility:    </p> 
+
+
+    <p class="text-xl" id="visibility">12</p>
+</div>
+
+
+            
+
+
+    <div class="flex p-5 bg-yellow-500 ">
+        <img src="./description.png" class="w-10" alt="">
+         <p class="text-xl">
+        discription:    </p> 
+
+        <p class="text-xl" id="description"></p>
+    </div>
+
+        </div>
+    </section>
+</body>
+<script src="./script.js"></script>
+
+</html>

@@ -29,7 +29,7 @@ function weather(city){
             humidity[i].innerHTML=data.main.humidity
             visibility[i].innerText=data.visibility
             climate[i].innerText=data.weather[0].main
-            map_data=data.weather[0].main
+            
             description[i].innerText=data.weather[0].description
            var temperature=Math.floor(((data.main.temp)-273))
             if (temperature>=28){
@@ -67,8 +67,9 @@ function weather(city){
         alert(error)
         });
 
-
+map_data=climate[0].innerHTML
 var uri2=fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
+console.log("map",map_data)
 var video=document.querySelector("video")
 uri2.then((response)=>{
     if(!response.ok){
@@ -77,11 +78,13 @@ uri2.then((response)=>{
     return response.json()
 
 }).then((data)=>{
-    console.log(Math.floor(Math.random()))
-    video.setAttribute("src",data.hits[0].videos.large.url)
+    
+    var rand=Math.floor((Math.random()*10))
+    video.setAttribute("src",data.hits[rand].videos.large.url)
     video.addEventListener("loadeddata",()=>{
 
         video.play()
+        console.log(Math.floor(Math.random()))
     })
     console.log(data.hits[0])
 }).catch((error)=>{

@@ -36,9 +36,9 @@ function weather(city){
     
     
                 temp[i].classList.remove("text-blue-500") 
-                temp.classList.add("text-yellow-300")
-                temp.classList.remove("text-yellow-700")
-                temp.classList.remove("text-red-500") 
+                temp[i].classList.add("text-yellow-300")
+                temp[i].classList.remove("text-yellow-700")
+                temp[i].classList.remove("text-red-500") 
             }
             else if(temperature<=22){
                 temp[i].classList.remove("text-yellow-500")
@@ -47,16 +47,16 @@ function weather(city){
                 temp[i].classList.remove("text-yellow-700")
             }
             else if(temperature>=32){
-         temp[i][i].classList.remove("text-yellow-500")
-                temp[i][i].classList.remove("text-blue-500")  
-                temp[i][i].classList.add("text-yellow-700")
-    temp[i][i].classList.remove("text-red-500")
+         temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-yellow-700")
+    temp[i].classList.remove("text-red-500")
             }
             else if(temperature>=38){
          temp[i].classList.remove("text-yellow-500")
-                temp[i][i].classList.remove("text-blue-500")  
-                temp[i][i].classList.add("text-red-700")
-                temp[i][i].classList.remove("text-yellow-700")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-red-700")
+                temp[i].classList.remove("text-yellow-700")
             }
         temp[i].innerText=temperature+"°C"
         }
@@ -64,7 +64,7 @@ function weather(city){
 
         console.log(data)
     }).catch((error)=>{
-        alert(error)
+        alert("video"+error)
         });
 
 map_data=climate[0].innerHTML
@@ -80,14 +80,17 @@ uri2.then((response)=>{
 
 }).then((data)=>{
     video.classList.remove("hidden")
+    video.play()
     var rand=Math.floor((Math.random()*10))
     video2.classList.add("hidden")
+    
     video2.setAttribute("src",data.hits[rand].videos.large.url)
 
     video2.addEventListener("loadeddata",()=>{
 video.classList.add("hidden")
 
 video2.classList.remove("hidden")
+video.pause()
         video2.play()
         console.log(Math.floor(Math.random()))
     })
@@ -97,11 +100,14 @@ video2.classList.remove("hidden")
 })
 
 }
-setTimeout(() => {
-    
-    weather("chennai")
-    console.log("starting")
-}, 1000);
+window.addEventListener("load",()=>{
+
+    setTimeout(() => {
+        
+        weather("chennai")
+        console.log("starting")
+    }, 1000);
+})
 trigger.onclick=()=>{
     
 var city=city_entry.value

@@ -81,9 +81,12 @@ uri2.then((response)=>{
 }).then((data)=>{
     video.classList.remove("hidden")
     var rand=Math.floor((Math.random()*10))
+    video2.classList.add("hidden")
     video2.setAttribute("src",data.hits[rand].videos.large.url)
+
     video2.addEventListener("loadeddata",()=>{
 video.classList.add("hidden")
+
 video2.classList.remove("hidden")
         video2.play()
         console.log(Math.floor(Math.random()))

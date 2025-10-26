@@ -74,7 +74,7 @@ var video=document.getElementById("video1")
 var video2=document.getElementById("video2")
 uri2.then((response)=>{
     if(!response.ok){
-        throw "the link is not loadedproperly"
+        throw "the link is not loaded properly kidly reload the page"
     }
     return response.json()
 
@@ -83,8 +83,13 @@ uri2.then((response)=>{
     video.play()
     var rand=Math.floor((Math.random()*10))
     video2.classList.add("hidden")
-    
-    video2.setAttribute("src",data.hits[rand].videos.large.url)
+    if(window.innerWidth==400){
+
+        video2.setAttribute("src",data.hits[rand].videos.small.url)
+    }
+    else{
+        video2.setAttribute("src",data.hits[rand].videos.large.url)
+    }
 
     video2.addEventListener("loadeddata",()=>{
 video.classList.add("hidden")
@@ -96,6 +101,7 @@ video.pause()
     })
     console.log(data.hits[0])
 }).catch((error)=>{
+    alert("the video is not loaded sucessfully ")
     console.log(error)
 })
 

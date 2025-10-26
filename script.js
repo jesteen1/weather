@@ -83,7 +83,7 @@ uri2.then((response)=>{
     video.play()
     var rand=Math.floor((Math.random()*10))
     video2.classList.add("hidden")
-    if(window.innerWidth==400){
+    if(window.innerWidth<=450){
 
         video2.setAttribute("src",data.hits[rand].videos.small.url)
     }

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,173 +8,193 @@
     <link rel="stylesheet" href="./tailwind.css">
     <link rel="icon" href="./icon.svg">
 </head>
+
 <body class=" lg:overfow-hidden  overflow-auto">
     <div class="relative overflow-hidden">
-    <div class="absolute top-0 bottom-0  box h-full  w-full  xl:h-72 top-0 z-10  ">
-        <div class="lg:sticky fixed lg:flex justify-between">
-             <div class="lg:p-5">
+        <div class="absolute top-0 bottom-0  box h-full  w-full  xl:h-72 top-0 z-10  ">
+            <div class="lg:sticky fixed lg:flex justify-between">
+                <div class="lg:p-5">
 
-                 <div class="flex xl:p-5 lg:sticky   fixed top-0 ">
-                     <p class="text-lg xl:text-2xl font-semibold text-white border-red-500  border bg-purple-500 px-2 py-3"><span class="my-auto">city:</span> </p><input  id="city_entry" placeholder="enter the city" class="px-2 py-3 text-lg xl:text-2xl  bg-yellow-300 border border-red-500     text-white xl:p-5 focus:outline-none" type="text"><button class="bg-blue-500 px-2 py-3 xl:p-5 text-white font-semibold text-lg xl:text-2xl " id="trigger">sumbit</button>
-                    
-                 </div>
-             </div>   
-             <div class="lg:flex hidden  text-2xl text-white   p-5  justify-center">
+                    <div class="flex xl:p-5 lg:sticky   fixed top-0 ">
+                        <p
+                            class="text-lg xl:text-2xl font-semibold text-white border-red-500  border bg-purple-500 px-2 py-3">
+                            <span class="my-auto">city:</span> </p><input id="city_entry" placeholder="enter the city"
+                            class="px-2 py-3 text-lg xl:text-2xl  bg-yellow-300 border border-red-500     text-white xl:p-5 focus:outline-none"
+                            type="text"><button
+                            class="bg-blue-500 px-2 py-3 xl:p-5 text-white font-semibold text-lg xl:text-2xl "
+                            id="trigger">sumbit</button>
 
-                <p class="capitalize mx-auto bg-gradient-to-b from-blue-500 to-pink-500  cursor-pointer px-2 py-3 rounded-3xl">Weather app</p>
-            </div>
-        </div>
-
-        <div class="lg:block hidden">
-
-            <div  class=" flex mb-1 flex justify-between mt-5">
-                <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="city">Tirnelveli</p>
-                <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="climate">mist</p>
-            </div>
-            <div  class=" flex justify-center align-middle w-full">
-                <p id="temp" class="bg-white rounded-full text-blue-500  shadow-3xl text-4xl w-32 text-center p-5">15°C</p>
-            </div>
-            <div class="flex justify-between    p-5 w-full rounded-full">
-                
-                <div class="flex  bg-white p-5  rounded-full">
-
-                    <div class="flex">
-                        <img src="./humidity.png" class="w-10" alt="">
-                         <p class="text-4xl">
-                        Humidity:    </p> 
-    
                     </div>
-                    <p class="text-4xl" id="humidity">12</p>
                 </div>
-                <div class="flex  bg-white p-5  rounded-full">
+                <div class="lg:flex hidden  text-2xl text-white   p-5  justify-center">
 
-                    <div class="flex">
-                        <img src="./wind.png" class="w-10" alt="">
-                         <p class="text-4xl">
-                        Pressure:    </p> 
-    
-                    </div>
-                    <p class="text-4xl" id="Pressure">12</p>
+                    <p
+                        class="capitalize mx-auto bg-gradient-to-b from-blue-500 to-pink-500  cursor-pointer px-2 py-3 rounded-3xl">
+                        Weather app</p>
                 </div>
             </div>
-            <!-- other section-->
-                         <div class="flex justify-center  p-5 w-full rounded-full">
-                
-                <div class="flex  bg-white p-5  rounded-full">
 
-                    <div class="flex">
-                        <img src="./eye.png" class="w-10" alt="">
-                         <p class="text-4xl">
-                        visibility:    </p> 
-    
-                    </div>
-                    <p class="text-4xl" id="visibility">12</p>
+            <div class="lg:block hidden">
+
+                <div class=" flex mb-1 flex justify-between mt-5">
+                    <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="city">
+                        Tirnelveli</p>
+                    <p class="bg-white rounded-full text-blue-500  shadow-2xl  text-4xl  text-center p-5" id="climate">
+                        mist</p>
                 </div>
-               
+                <div class=" flex justify-center align-middle w-full">
+                    <p id="temp" class="bg-white rounded-full text-blue-500  shadow-3xl text-4xl w-32 text-center p-5">
+                        15°C</p>
+                </div>
+                <div class="flex justify-between    p-5 w-full rounded-full">
+
+                    <div class="flex  bg-white p-5  rounded-full">
+
+                        <div class="flex">
+                            <img src="./humidity.png" class="w-10" alt="">
+                            <p class="text-4xl">
+                                Humidity: </p>
+
+                        </div>
+                        <p class="text-4xl" id="humidity">12</p>
+                    </div>
+                    <div class="flex  bg-white p-5  rounded-full">
+
+                        <div class="flex">
+                            <img src="./wind.png" class="w-10" alt="">
+                            <p class="text-4xl">
+                                Pressure: </p>
+
+                        </div>
+                        <p class="text-4xl" id="Pressure">12</p>
+                    </div>
+                </div>
+                <!-- other section-->
+                <div class="flex justify-center  p-5 w-full rounded-full">
+
+                    <div class="flex  bg-white p-5  rounded-full">
+
+                        <div class="flex">
+                            <img src="./eye.png" class="w-10" alt="">
+                            <p class="text-4xl">
+                                visibility: </p>
+
+                        </div>
+                        <p class="text-4xl" id="visibility">12</p>
+                    </div>
+
+                </div>
+                <div class="flex   p-5 justify-center  rounded-full">
+                    <div class="bg-white p-5 rounded-full flex">
+
+                        <div class="flex">
+                            <img src="./description.png" class="w-10" alt="">
+                            <p class="text-4xl">
+                                discription: </p>
+
+                        </div>
+                        <p class="text-4xl" id="description"></p>
+                    </div>
+                </div>
             </div>
-             <div class="flex   p-5 justify-center  rounded-full">
-<div class="bg-white p-5 rounded-full flex">
+            <div style="background-color: rgba(0, 0, 0, 0.295);"
+                class="lg:hidden  block z-0 h-full text-3xl md:text-6xl  text-white font-serif font-extrabold grid place-content-center justify-center  border  text-center  ">
 
-    <div class="flex">
-        <img src="./description.png" class="w-10" alt="">
-         <p class="text-4xl">
-        discription:    </p> 
-
-    </div>
-    <p class="text-4xl" id="description"></p>
-</div>
-</div>
+                <p class="my-auto mx-auto flex mx-auto ">welcome to Weather App</p>
+            </div>
         </div>
-        <div style="background-color: rgba(0, 0, 0, 0.295);" class="lg:hidden  block z-0 h-full text-3xl md:text-6xl  text-white font-serif font-extrabold grid place-content-center justify-center  border  text-center  ">
+        <div class="">
 
-            <p class="my-auto mx-auto flex mx-auto ">welcome to  Weather App</p>
+            <video src="./mist.mp4" id="video1" loading="lazy" class="w-full " preload="metadata" muted autoplay="true"
+                loop></video>
+            <video src="./mist.mp4" id="video2" loading="lazy" class="hidden w-full " preload="metadata" muted
+                autoplay="true" loop></video>
+
         </div>
+
+
+
     </div>
-    <div class="">
-
-        <video src="./mist.mp4" id="video1" loading="lazy" class="w-full " preload="metadata" muted autoplay="true" loop ></video>
-        <video src="./mist.mp4" id="video2" loading="lazy" class="hidden w-full " preload="metadata" muted autoplay="true" loop ></video>
-        
-    </div>
-
-
-
-</div>
     <section id="phone" class="lg:hidden  block bg-purple-300 mb-4 border border-black p-5 ">
-    <p class="text-center text-gray-800 font-bold mb-7 capitalize text-4xl">climate Report</p>
-    <div class="   block bg-purple-300 text-gray-800  p-5   h-full font-semibold     grid  lg:grid-cols-3  md:grid-cols-2 grid-cols-1  gap-2 lg:gap-10  ">
-                <!--location-->
-    
-                <div  class="  flex text-3xl capitalize rounded-3xl p-10  bg-purple-500">
-        <img src="./city-solid-full.svg" class="w-10" alt="">
-        <p class="">city:</p>
-        <p id="city" class="    shadow-3xl    ">Tirnelveli</p>
-    </div>
+        <p class="text-center text-gray-800 font-bold mb-7 capitalize text-4xl">climate Report</p>
+        <div
+            class="   block bg-purple-300 text-gray-800  p-5   h-full font-semibold     grid  lg:grid-cols-3  md:grid-cols-2 grid-cols-1  gap-2 lg:gap-10  ">
+            <!--location-->
 
-    <div class="flex text-3xl capitalize rounded-3xl p-10   bg-purple-500 "><img src="./cloudy-day.png" class="w-10" alt=""><p class="">climate:</p><p class="" id="climate">mist</p></div>
-    <!--temperature-->
+            <div class="  flex text-3xl capitalize rounded-3xl p-10  bg-purple-500">
+                <img src="./city-solid-full.svg" class="w-10" alt="">
+                <p class="">city:</p>
+                <p id="city" class="    shadow-3xl    ">Tirnelveli</p>
+            </div>
 
-    <div  class="  flex  text-3xl capitalize rounded-3xl p-10 bg-purple-500">
-        <img src="./temperature.png" class="w-10" alt="">
-        <p class="">temp:</p>
-        <p id="temp" class="    shadow-3xl    ">15°C</p>
-    </div>
+            <div class="flex text-3xl capitalize rounded-3xl p-10   bg-purple-500 "><img src="./cloudy-day.png"
+                    class="w-10" alt="">
+                <p class="">climate:</p>
+                <p class="" id="climate">mist</p>
+            </div>
+            <!--temperature-->
 
-        
-        <div class="flex text-3xl capitalize rounded-3xl p-10   bg-purple-500">
+            <div class="  flex  text-3xl capitalize rounded-3xl p-10 bg-purple-500">
+                <img src="./temperature.png" class="w-10" alt="">
+                <p class="">temp:</p>
+                <p id="temp" class="    shadow-3xl    ">15°C</p>
+            </div>
 
-            
+
+            <div class="flex text-3xl capitalize rounded-3xl p-10   bg-purple-500">
+
+
                 <img src="./humidity.png" class="w-10" alt="">
                 <p class="t">
-                Humidity:    </p> 
+                    Humidity: </p>
 
-            
-            <p class="" id="humidity">12</p>
-        </div>
-        <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500  ">
 
-        
+                <p class="" id="humidity">12</p>
+            </div>
+            <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500  ">
+
+
                 <img src="./wind.png" class="w-10" alt="">
                 <p class="">
-                Pressure:    </p> 
+                    Pressure: </p>
 
-        
-            <p class="" id="Pressure">12</p>
+
+                <p class="" id="Pressure">12</p>
+            </div>
+
+            <!-- other section-->
+
+
+            <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500 ">
+
+
+                <img src="./eye.png" class="w-10" alt="">
+                <p class="">
+                    visibility: </p>
+
+
+                <p class="" id="visibility">12</p>
+            </div>
+
+
+
+
+
+            <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500 ">
+                <img src="./description.png" class="w-10" alt="">
+                <p class="">
+                    discription: </p>
+
+                <p class="" id="description"></p>
+            </div>
+
         </div>
-
-    <!-- other section-->
-                
-        
-        <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500 ">
-
-
-    <img src="./eye.png" class="w-10" alt="">
-    <p class="">
-    visibility:    </p> 
-
-
-    <p class="" id="visibility">12</p>
-    </div>
-
-
-
-
-
-    <div class="flex text-3xl capitalize rounded-3xl p-10 bg-purple-500 ">
-    <img src="./description.png" class="w-10" alt="">
-    <p class="">
-    discription:    </p> 
-
-    <p class="" id="description"></p>
-    </div>
-
-    </div>
 
 
 
     </section>
 
-    
+
 </body>
 <script src="./script.js"></script>
 

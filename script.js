@@ -10,10 +10,10 @@ var insert_city=document.querySelectorAll("#city")
         var humidity=document.querySelectorAll("#humidity")
         var description=document.querySelectorAll("#description")
 
-function weather(city){
+async function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
         var map_data=0
-    var data= fetch(uri)
+    var data=await fetch(uri)
     data.then((respoonse)=>{
         if(!respoonse.ok){
             throw `${respoonse.status} enter the  city correctly`
@@ -123,3 +123,4 @@ weather(city)
   
 
 }
+

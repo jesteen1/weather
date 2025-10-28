@@ -106,7 +106,7 @@ video.pause()
 })
 
 }
-window.addEventListener("load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
 
     setTimeout(() => {
         
@@ -121,4 +121,5 @@ weather(city)
   console.log("trigger")    
   
   
+
 }

@@ -95,20 +95,33 @@ uri2.then((response)=>{
 video.classList.add("hidden")
 
 video2.classList.remove("hidden")
-video.pause()
-console.log(video.paused)
- try {
-    video.pause()   
-     video2.play()
-     console.log(Math.floor(Math.random()))
- }
-catch(error){
-    console.log(error)
- video.play()
-}
 
+playPromise=video2.play()
+console.log(video.paused)
+
+   if (playPromise !== undefined) {
+    playPromise.then(() => {
+      // Automatic playback started!
+      // Show playing UI.
+      // We can now safely pause video...
+         video.pause()   
+     
+     console.log(Math.floor(Math.random()))
     })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+      video.play()
+      console.log(error)
+    });
+ 
+   }
+ 
+
+
+
     console.log(data.hits[0])
+    })
 }).catch((error)=>{
     alert("the video is not loaded sucessfully ")
     console.log(error)

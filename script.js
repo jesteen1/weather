@@ -10,10 +10,10 @@ var insert_city=document.querySelectorAll("#city")
         var humidity=document.querySelectorAll("#humidity")
         var description=document.querySelectorAll("#description")
 
-function weather(city){
+ function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
         var map_data=0
-    var data= fetch(uri)
+    var data=  fetch(uri)
     data.then((respoonse)=>{
         if(!respoonse.ok){
             throw `${respoonse.status} enter the  city correctly`
@@ -68,7 +68,7 @@ function weather(city){
         });
 
 map_data=climate[0].innerHTML
-var uri2=fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
+var uri2= fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
 console.log("map",map_data)
 var video=document.getElementById("video1")
 var video2=document.getElementById("video2")
@@ -96,8 +96,17 @@ video.classList.add("hidden")
 
 video2.classList.remove("hidden")
 video.pause()
-        video2.play()
-        console.log(Math.floor(Math.random()))
+console.log(video.paused)
+ try {
+    video.pause()   
+     video2.play()
+     console.log(Math.floor(Math.random()))
+ }
+catch(error){
+    console.log(error)
+ video.play()
+}
+
     })
     console.log(data.hits[0])
 }).catch((error)=>{

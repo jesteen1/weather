@@ -9,11 +9,7 @@ var insert_city=document.querySelectorAll("#city")
         var Pressure=document.querySelectorAll("#Pressure")
         var humidity=document.querySelectorAll("#humidity")
         var description=document.querySelectorAll("#description")
- (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tzk1vfgjr7");
+
  function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
         var map_data=0
@@ -149,3 +145,4 @@ weather(city)
   
 
 }
+

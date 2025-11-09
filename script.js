@@ -9,7 +9,7 @@ var insert_city=document.querySelectorAll("#city")
         var Pressure=document.querySelectorAll("#Pressure")
         var humidity=document.querySelectorAll("#humidity")
         var description=document.querySelectorAll("#description")
-       var editors=true;
+       let editors=true;
 
  function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
@@ -151,6 +151,7 @@ weather(city)
   
 
 }
+
 
 
 

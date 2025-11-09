@@ -66,8 +66,9 @@ editors=true
 console.log(editors)            
         console.log(data)
     }).catch((error)=>{
+        editors=false   
         alert("video error:"+error)
-        editors=false
+        
         });
 console.log(editors)
 map_data=climate[0].innerHTML
@@ -150,6 +151,7 @@ weather(city)
   
 
 }
+
 
 
 

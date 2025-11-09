@@ -142,7 +142,7 @@ console.log(editors)
     }).catch((error)=>{
         editors=false   
         alert("video error:"+error)
-        
+        console.log(editors)
         });
 console.log(editors)
         for ( let i=0;i<Pressure.length;i++){
@@ -273,6 +273,7 @@ weather(city)
   
 
 }
+
 
 
 

@@ -17,7 +17,7 @@ var insert_city=document.querySelectorAll("#city")
     var data=  fetch(uri)
     data.then((respoonse)=>{
         if(!respoonse.ok){
-            throw `${respoonse.status}  enter the  city correctly`
+            throw `${respoonse.status} or  enter the  city correctly`
         }
         
         return respoonse.json()
@@ -148,6 +148,7 @@ weather(city)
   
 
 }
+
 
 
 

@@ -22,7 +22,129 @@ var insert_city=document.querySelectorAll("#city")
         
         return respoonse.json()
     }).then((data)=>{
+        let editors=true;
+
+ function weather(city){
+        var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
+        var map_data=0
+    var data=  fetch(uri)
+    data.then((respoonse)=>{
+        if(!respoonse.ok){
+            throw `${respoonse.status} or  enter the  city correctly`
+        }
         
+        return respoonse.json()
+    }).then((data)=>{
+        let editors=true;
+
+ function weather(city){
+        var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
+        var map_data=0
+    var data=  fetch(uri)
+    data.then((respoonse)=>{
+        if(!respoonse.ok){
+            throw `${respoonse.status} or  enter the  city correctly`
+        }
+        
+        return respoonse.json()
+    }).then((data)=>{
+         editors=true 
+        for ( let i=0;i<Pressure.length;i++){
+               
+            insert_city[i].innerText=data.name
+            Pressure[i].innerText=data.main.pressure
+            humidity[i].innerHTML=data.main.humidity
+            visibility[i].innerText=data.visibility
+            climate[i].innerText=data.weather[0].main
+            
+            description[i].innerText=data.weather[0].description
+           var temperature=Math.floor(((data.main.temp)-273))
+            if (temperature>=28){
+    
+    
+                temp[i].classList.remove("text-blue-500") 
+                temp[i].classList.add("text-yellow-300")
+                temp[i].classList.remove("text-yellow-700")
+                temp[i].classList.remove("text-red-500") 
+            }
+            else if(temperature<=22){
+                temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-red-500")  
+                temp[i].classList.add("text-blue-300")
+                temp[i].classList.remove("text-yellow-700")
+            }
+            else if(temperature>=32){
+         temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-yellow-700")
+    temp[i].classList.remove("text-red-500")
+            }
+            else if(temperature>=38){
+         temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-red-700")
+                temp[i].classList.remove("text-yellow-700")
+            }
+        temp[i].innerText=temperature+"°C"
+        }
+        
+
+            
+        console.log(data)
+    }).catch((error)=>{
+        editors=false   
+        alert("video error:"+error)
+        
+        });
+console.log(editors)
+        for ( let i=0;i<Pressure.length;i++){
+
+            insert_city[i].innerText=data.name
+            Pressure[i].innerText=data.main.pressure
+            humidity[i].innerHTML=data.main.humidity
+            visibility[i].innerText=data.visibility
+            climate[i].innerText=data.weather[0].main
+            
+            description[i].innerText=data.weather[0].description
+           var temperature=Math.floor(((data.main.temp)-273))
+            if (temperature>=28){
+    
+    
+                temp[i].classList.remove("text-blue-500") 
+                temp[i].classList.add("text-yellow-300")
+                temp[i].classList.remove("text-yellow-700")
+                temp[i].classList.remove("text-red-500") 
+            }
+            else if(temperature<=22){
+                temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-red-500")  
+                temp[i].classList.add("text-blue-300")
+                temp[i].classList.remove("text-yellow-700")
+            }
+            else if(temperature>=32){
+         temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-yellow-700")
+    temp[i].classList.remove("text-red-500")
+            }
+            else if(temperature>=38){
+         temp[i].classList.remove("text-yellow-500")
+                temp[i].classList.remove("text-blue-500")  
+                temp[i].classList.add("text-red-700")
+                temp[i].classList.remove("text-yellow-700")
+            }
+        temp[i].innerText=temperature+"°C"
+        }
+        
+
+            
+        console.log(data)
+    }).catch((error)=>{
+        editors=false   
+        alert("video error:"+error)
+        
+        });
+console.log(editors)
         for ( let i=0;i<Pressure.length;i++){
 
             insert_city[i].innerText=data.name
@@ -151,6 +273,7 @@ weather(city)
   
 
 }
+
 
 
 

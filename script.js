@@ -62,8 +62,8 @@ var insert_city=document.querySelectorAll("#city")
         temp[i].innerText=temperature+"°C"
         }
         
-editors=true 
-console.log(editors)            
+
+            
         console.log(data)
     }).catch((error)=>{
         editors=false   
@@ -151,6 +151,7 @@ weather(city)
   
 
 }
+
 
 
 

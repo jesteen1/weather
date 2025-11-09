@@ -11,18 +11,6 @@ var insert_city=document.querySelectorAll("#city")
         var description=document.querySelectorAll("#description")
        let editors=true;
 
- function weather(city){
-        var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
-        var map_data=0
-    var data=  fetch(uri)
-    data.then((respoonse)=>{
-        if(!respoonse.ok){
-            throw `${respoonse.status} or  enter the  city correctly`
-        }
-        
-        return respoonse.json()
-    }).then((data)=>{
-        let editors=true;
 
  function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
@@ -139,11 +127,6 @@ console.log(editors)
 
             
         console.log(data)
-    }).catch((error)=>{
-        editors=false   
-        alert("video error:"+error)
-        console.log(editors)
-        });
 console.log(editors)
         for ( let i=0;i<Pressure.length;i++){
 
@@ -273,6 +256,7 @@ weather(city)
   
 
 }
+
 
 
 

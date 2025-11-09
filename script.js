@@ -63,14 +63,16 @@ var insert_city=document.querySelectorAll("#city")
         }
         
 editors=true
+console.log(editors)            
         console.log(data)
     }).catch((error)=>{
         alert("video error:"+error)
         editors=false
         });
-
+console.log(editors)
 map_data=climate[0].innerHTML
 if(editors==true){
+        console.log(editors)
 var uri2= fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
 console.log("map",map_data)
 var video=document.getElementById("video1")
@@ -148,6 +150,7 @@ weather(city)
   
 
 }
+
 
 
 

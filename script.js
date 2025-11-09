@@ -9,6 +9,7 @@ var insert_city=document.querySelectorAll("#city")
         var Pressure=document.querySelectorAll("#Pressure")
         var humidity=document.querySelectorAll("#humidity")
         var description=document.querySelectorAll("#description")
+var editor=True;
 
  function weather(city){
         var uri=`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=989c617f4547ce0579d9bfdc9b23d51f`
@@ -61,13 +62,15 @@ var insert_city=document.querySelectorAll("#city")
         temp[i].innerText=temperature+"°C"
         }
         
-
+editor=True
         console.log(data)
     }).catch((error)=>{
         alert("video"+error)
+        editor=False
         });
 
 map_data=climate[0].innerHTML
+if(editor==True){
 var uri2= fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
 console.log("map",map_data)
 var video=document.getElementById("video1")
@@ -126,7 +129,7 @@ console.log(video.paused)
     alert("the video is not loaded sucessfully ")
     console.log(error)
 })
-
+}
 }
 window.addEventListener("load",()=>{
 
@@ -145,4 +148,5 @@ weather(city)
   
 
 }
+
 

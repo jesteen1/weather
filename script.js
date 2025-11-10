@@ -75,18 +75,20 @@ await weatherreport()
 map_data=climate[0].innerHTML
 console.log(editor)  
 if(editor==true){
-
-    var uri2= fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
+async function videos(){
+    try{
+    var response= await fetch(`https://pixabay.com/api/videos/?key=52837332-79eca5211d3cc7885316c17be&q=${map_data}`)
     console.log("map",map_data)
     var video=document.getElementById("video1")
     var video2=document.getElementById("video2")
-    uri2.then((response)=>{
+    
+ 
         if(!response.ok){
             throw "the link is not loaded properly kidly reload the page"
         }
-        return response.json()
+      var  data=await response.json()
     
-    }).then((data)=>{
+  
         video.classList.remove("hidden")
         video.play()
         var rand=Math.floor((Math.random()*10))
@@ -104,7 +106,7 @@ if(editor==true){
     
     video2.classList.remove("hidden")
     
-    playPromise=video2.play()
+  var  playPromise=video2.play()
     console.log(video.paused)
     
        if (playPromise !== undefined) {
@@ -124,18 +126,20 @@ if(editor==true){
         });
      
        }
-     
+      console.log(data.hits[0])
+        })}
     
     
-    
-        console.log(data.hits[0])
-        })
-    }).catch((error)=>{
+       
+    catch(error){
         alert("the video is not loaded sucessfully ")
         console.log(error)
-    })
     
+}
     }
+    await videos()
+}
+
 }
 window.addEventListener("load",()=>{
 
@@ -155,7 +159,5 @@ var city=city_entry.value
 weather(city)
   console.log("trigger")    
   
-  
-
 }
 

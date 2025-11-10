@@ -139,10 +139,14 @@ if(editor==true){
 }
 window.addEventListener("load",()=>{
 
-    setTimeout(() => {
+    setTimeout( async () => {
         
-        weather("chennai")
+       await weather("chennai")
         console.log("starting")
+        var main=document.getElementById("main")
+        var load=document.getElementById("load")
+        load.classList.add("hidden")
+        main.classList.remove("hidden")
     }, 1000);
 })
 trigger.onclick=()=>{
